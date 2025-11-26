@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Математика: Контрольная параллель</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Математика: Контрольная параллель</h1>
+        <h2 class="header__title">Инструкция</h2>
+        <ol class="header__list">
+            <li class="header__item">Номер варианта определяется по последней цифре номера в списке группы.</li>
+            <li class="header__item">Студенты в списке группы с 1 по 10 - выполняют билеты 1 - 10</li>
+            <li class="header__item">Студенты в списке с 11 по 20 - для выбора билета используют вторую цифру. <br>
+                Пример: Студент под номер 14 - использует вариант № 4, а студент под номером 17 - вариант № 7</li>
+            <li class="header__item">Для студентов чьи номера в списке наичанаются после 30 - ситуация аналогична. <br>
+                Пример: Студент под номер 31 - использует вариант № 1, а студент под номером 33 - вариант № 3</li>
+            </li>
+        </ol>
+    </header>
+    <main class="main">
+        <section class="section task task1">
+            <h3 class="task__title">Задание 1</h3>
+            <div class="task1__block">
+                <p>sin(x + y) = sin x cos y + cos x sin y</p>
+                <p>sin(x - y) = sin x cos y - cos x sin y</p>
+                <p>sin(x + y) = sin x cos y - cos x sin y</p>
+                <p>sin(x - y) = sin x cos y + cos x sin y</p>
+            </div>
+            <div class="task1__group">
+                <div class="task1__row">
+                    <div class="math-block">
+                        <p>tg(x - y) = </p>
+                        <div class="mathContainer">
+                            <p>tg x + tg y</p>
+                            <p>1 - tg x tg y</p>
+                        </div>
+                    </div>
+                    <div class="math-block">
+                        <p>tg(x - y) = </p>
+                        <div class="mathContainer">
+                            <p>tg x - tg y</p>
+                            <p>1 + tg x tg y</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="task1__row">
+                    <div class="math-block">
+                        <p>ctg(x + y) = </p>
+                        <div class="mathContainer">
+                            <p>ctg x ctg y - 1</p>
+                            <p>ctg x + ctg y</p>
+                        </div>
+                    </div>
+                    <div class="math-block">
+                        <p>ctg(x - y) = </p>
+                        <div class="mathContainer">
+                            <p>ctg x ctg y + 1</p>
+                            <p>ctg x - ctg y</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cards">
+
+        </section>
+    </main>
+
+
+    <template id="templateCard">
+        <div class="card">
+            <h4 class="card__title">
+                Вариант <p class="card__title--counter"></p>
+            </h4>
+            <ol class="card__items"></ol>
+        </div>
+    </template>
+
+    <template id="templateTask">
+        <li class="card__item">
+            <p class="card-content card__item--type"></p>(
+            <p class="card-content card__item__value1"></p>
+            <span class="card__item-decor">o</span>
+            <p class="card-content card__item-action"></p>
+            <span class="card__item__value2"></span>
+            <p class="card-content card__item-decor">o</p> )
+        </li>
+    </template>
+
+
+    <script>
+        const variantCollection = 10;
+
+        const arrTaskCollection = [
+            {
+                variant: 1,
+                mathType: "sin",
+                value1: 30,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 1,
+                mathType: "cos",
+                value1: 60,
+                action: "-",
+                value2: 45,
+            },
+            {
+                variant: 1,
+                mathType: "sin",
+                value1: 180,
+                action: "-",
+                value2: 60,
+            },
+            {
+                variant: 1,
+                mathType: "cos",
+                value1: 135,
+                action: "+",
+                value2: 30,
+            },
+            {
+                variant: 1,
+                mathType: "tg",
+                value1: 45,
+                action: "+",
+                value2: 30,
+            },
+            {
+                variant: 2,
+                mathType: "cos",
+                value1: 45,
+                action: "+",
+                value2: 30,
+            },
+            {
+                variant: 2,
+                mathType: "sin",
+                value1: 60,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 2,
+                mathType: "cos",
+                value1: 120,
+                action: "-",
+                value2: 45,
+            },
+            {
+                variant: 2,
+                mathType: "sin",
+                value1: 150,
+                action: "+",
+                value2: 30,
+            },
+            {
+                variant: 2,
+                mathType: "tg",
+                value1: 60,
+                action: "-",
+                value2: 45,
+            },
+        ]
+
+        const templateCard = document.querySelector('#templateCard');
+        const templateTask = document.querySelector('#templateTask');
+
+        const cards = document.querySelector('.cards');
+
+        for (let i = 1; i <= variantCollection; i++) {
+            let newCard = templateCard.content.cloneNode(true); //Создаю клон шаблона карточк
+            const cardCounter = newCard.querySelector('.card__title--counter'); //Заголовок
+            cardCounter.textContent = i;
+            loadTasks(i, arrTaskCollection, newCard);
+            cards.append(newCard);
+        }
+
+        function loadTasks(i, arrTaskCollection, newCard) {
+            const card__items = newCard.querySelector('.card__items'); //В новой карточке нахожу место куда буду пихать строки
+
+
+            arrTaskCollection.forEach((newData) => {
+                if (newData.variant == i) {
+                    const newCardRow = templateTask.content.cloneNode(true); //Создаю клон шаблона строки
+                    newCardRow.querySelector('.card__item--type').textContent = newData.mathType;
+                    newCardRow.querySelector('.card__item__value1').textContent = newData.value1;
+                    newCardRow.querySelector('.card__item-action').textContent = newData.action;
+                    newCardRow.querySelector('.card__item__value2').textContent = newData.value2;
+                    card__items.append(newCardRow);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

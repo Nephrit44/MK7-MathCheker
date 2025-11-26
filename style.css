@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+:root {
+    --mainFont: "Libertinus Sans", sans-serif;
+    --bgColor: #f0ead6;
+}
+
+body {
+    font-family: var(--mainFont);
+    background-color: var(--bgColor);
+}
+
+.header {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 36x;
+    line-height: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 24x;
+    line-height: normal;
+    font-weight: 400;
+}
+
+.header__list {
+    padding: 10px 10px 10px 30px;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 400;
+}
+
+.header__item {
+    padding: 5px 0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.task {
+    padding: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 3px solid #ad9545;
+    border-radius: 10px;
+    background-color: beige;
+    font-size: 20px;
+}
+
+.task__title {
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: #5f4b0b;
+}
+
+.task1__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px;
+}
+
+.task1__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.math-block {
+    position: relative;
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    font-weight: 700;
+    padding: 15px;
+}
+
+.mathContainer {
+    text-align: center;
+}
+
+.mathContainer>p:first-child {
+    border-bottom: 1px solid #000;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    padding: 10px 20px;
+    border: 1px solid #ad9545;
+    border-radius: 10px;
+    width: 240px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background-color: #fff;
+}
+
+.card__title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+}
+
+.card__item {
+    position: relative;
+    margin-left: 20px;
+    padding-bottom: 2px;
+}
+
+.card__item:not(:last-child) {
+    border-bottom: 1px solid #ad9545;
+}
+
+.card-content,
+.card__title--counter {
+    display: inline-block;
+}
+
+.card__item-decor {
+    position: absolute;
+    content: "";
+    top: -7px;
+    font-size: 10px;
+    transform: translateX(-8px);
+}
