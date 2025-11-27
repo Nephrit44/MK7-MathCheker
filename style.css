@@ -30,6 +30,7 @@ p {
 body {
     font-family: var(--mainFont);
     background-color: var(--bgColor);
+    color: #0d2b52;
 }
 
 .header {
@@ -37,17 +38,43 @@ body {
     margin: 0 auto;
 }
 
+.button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #0d2b52;
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 400;
+    color: inherit;
+}
+
+.header__button {
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button__arrow {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8' standalone='no'?%3e%3c!-- Created with Inkscape (http://www.inkscape.org/) --%3e%3csvg width='11mm' height='11mm' viewBox='0 0 11 11' version='1.1' id='svg1' inkscape:version='1.4 (unknown)' sodipodi:docname='Иконка ARROW.svg' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3e%3csodipodi:namedview id='namedview1' pagecolor='%23ffffff' bordercolor='%23000000' borderopacity='0.25' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' inkscape:document-units='mm' showguides='true' inkscape:zoom='11.313709' inkscape:cx='31.99658' inkscape:cy='34.515648' inkscape:window-width='1920' inkscape:window-height='1008' inkscape:window-x='0' inkscape:window-y='0' inkscape:window-maximized='1' inkscape:current-layer='layer1'%3e%3csodipodi:guide position='41.37829,-11.670035' orientation='1,0' id='guide1' inkscape:locked='false' /%3e%3csodipodi:guide position='22.410776,-29.566591' orientation='0,-1' id='guide2' inkscape:locked='false' /%3e%3c/sodipodi:namedview%3e%3cdefs id='defs1' /%3e%3cg inkscape:label='Слой 1' inkscape:groupmode='layer' id='layer1'%3e%3cpath style='fill:%230d2b52;fill-opacity:1;stroke:none;stroke-width:0.253829;stroke-miterlimit:4.2;stroke-opacity:1' d='M 10.559943,0.51350298 5.5925246,10.513504 0.55994199,0.51352198 Z' id='path2' sodipodi:nodetypes='cccc' /%3e%3c/g%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+    transition: all .3s;
+}
+
+.header__flexbox {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
 .title {
-    font-size: 36x;
+    font-size: 36px;
     line-height: normal;
     font-weight: 700;
     text-align: center;
-}
-
-.header__title {
-    font-size: 24x;
-    line-height: normal;
-    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 .header__list {
@@ -159,8 +186,57 @@ body {
 
 .card__item-decor {
     position: absolute;
-    content: "";
     top: -7px;
     font-size: 10px;
     transform: translateX(-8px);
+}
+
+.task2__group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.task2__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    letter-spacing: 1px;
+}
+
+.task2__item {
+    padding: 10px;
+    border: 1px solid #77611857;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.task2__item--flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.task2__item--flex>p:first-child {
+    position: relative;
+    padding: 5px 0 5px 5px;
+    border-bottom: 1px solid #5f4b0b;
+}
+
+.task2__item--flex>p:last-child {
+    position: relative;
+    padding: 5px 0 5px 5px;
+}
+
+.task2__item--degree {
+    position: absolute;
+    font-size: 12px;
+    transform: translateX(-5px);
+}
+
+.visible {
+    display: none;
+}
+
+.rotate-right {
+    transform-origin: 50% 50%; 
+    transform: rotate(-90deg)
 }

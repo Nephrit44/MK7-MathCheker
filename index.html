@@ -15,7 +15,10 @@
 <body>
     <header class="header">
         <h1 class="title">Математика: Контрольная параллель</h1>
-        <h2 class="header__title">Инструкция</h2>
+        <div class="header__flexbox">
+            <button class="button header__button" type="button">Инструкция</button>
+            <span class="button__arrow"></span>
+        </div>
         <ol class="header__list">
             <li class="header__item">Номер варианта определяется по последней цифре номера в списке группы.</li>
             <li class="header__item">Студенты в списке группы с 1 по 10 - выполняют билеты 1 - 10</li>
@@ -72,8 +75,63 @@
         </section>
 
         <section class="section cards">
-
+            <!--ЗАДАНИЕ 1. Генерируется из JS-->
         </section>
+
+        <section class="section task task2">
+            <h3 class="task__title">Задание 2</h3>
+            <div class="task2__group">
+                <ol class="task2__items">
+                    <li class="task2__item">
+                        (1 - sin(-a)) (1 - sin a)
+                    </li>
+                    <li class="task2__item">
+                        tg(-a) ctga + sin <span class="task2__item--degree">2</span>(-a)
+                    </li>
+                    <li class="task2__item">
+                        cos(-a) + cos a tg <span class="task2__item--degree">2</span>(-a)
+                    </li>
+                    <li class="task2__item">
+                        <div class="task2__item--flex">
+                            <p>1 + sin(-a)</p>
+                            <p>cos(-a) - tg(-a)</p>
+                        </div>
+                    </li>
+                    <li class="task2__item">
+                        <div class="task2__item--flex">
+                            <p>cos <span class="task2__item--degree">2</span>(-a)-cos <span
+                                    class="task2__item--degree">4</span>(-a)</p>
+                            <p>sin <span class="task2__item--degree">2</span>(-a)</p>
+                        </div>
+                    </li>
+                </ol>
+                <ol class="task2__items">
+                    <li class="task2__item">
+                        (1 - cos(-a))(1+cos(-a))
+                    </li>
+                    <li class="task2__item">
+                        tg a ctg(-a)+cos <span class="task2__item--degree">2</span>(-a)
+                    </li>
+                    <li class="task2__item">
+                        sin(-a)-sin a ctg <span class="task2__item--degree">2</span>(-a)
+                    </li>
+                    <li class="task2__item">
+                        <div class="task2__item--flex">
+                            <p>1+cos(-a)</p>
+                            <p>sin(-a)-ctg(-a)</p>
+                        </div>
+                    </li>
+                    <li class="task2__item">
+                        <div class="task2__item--flex">
+                            <p>sin <span class="task2__item--degree">2</span>(-a)-sin <span
+                                    class="task2__item--degree">4</span>(-a)</p>
+                            <p>cos <span class="task2__item--degree">2</span> (-a)</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
     </main>
 
 
@@ -172,12 +230,296 @@
                 action: "-",
                 value2: 45,
             },
+            {
+                variant: 3,
+                mathType: "sin",
+                value1: 60,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 3,
+                mathType: "cos",
+                value1: 45,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 3,
+                mathType: "sin",
+                value1: 90,
+                action: "-",
+                value2: 15,
+            }, {
+                variant: 3,
+                mathType: "cos",
+                value1: 120,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 3,
+                mathType: "tg",
+                value1: 45,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 4,
+                mathType: "cos",
+                value1: 30,
+                action: "+",
+                value2: 60,
+            },
+            {
+                variant: 4,
+                mathType: "sin",
+                value1: 45,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 4,
+                mathType: "cos",
+                value1: 180,
+                action: "-",
+                value2: 75,
+            },
+            {
+                variant: 4,
+                mathType: "sin",
+                value1: 240,
+                action: "+",
+                value2: 30,
+            },
+            {
+                variant: 4,
+                mathType: "tg",
+                value1: 30,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 5,
+                mathType: "sin",
+                value1: 45,
+                action: "+",
+                value2: 60,
+            },
+            {
+                variant: 5,
+                mathType: "cos",
+                value1: 60,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 5,
+                mathType: "sin",
+                value1: 120,
+                action: "-",
+                value2: 45,
+            },
+            {
+                variant: 5,
+                mathType: "cos",
+                value1: 450,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 5,
+                mathType: "tg",
+                value1: 60,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 6,
+                mathType: "cos",
+                value1: 60,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 6,
+                mathType: "sin",
+                value1: 30,
+                action: "-",
+                value2: 45,
+            },
+            {
+                variant: 6,
+                mathType: "cos",
+                value1: 90,
+                action: "-",
+                value2: 75,
+            },
+            {
+                variant: 6,
+                mathType: "sin",
+                value1: 300,
+                action: "-",
+                value2: 45,
+            },
+            {
+                variant: 6,
+                mathType: "tg",
+                value1: 120,
+                action: "-",
+                value2: 45,
+            },
+            {
+                variant: 7,
+                mathType: "sin",
+                value1: 30,
+                action: "-",
+                value2: 60,
+            },
+            {
+                variant: 7,
+                mathType: "cos",
+                value1: 45,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 7,
+                mathType: "sin",
+                value1: 135,
+                action: "-",
+                value2: 60,
+            },
+            {
+                variant: 7,
+                mathType: "cos",
+                value1: 245,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 7,
+                mathType: "tg",
+                value1: 135,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 8,
+                mathType: "cos",
+                value1: 30,
+                action: "-",
+                value2: 60,
+            },
+            {
+                variant: 8,
+                mathType: "sin",
+                value1: 60,
+                action: "+",
+                value2: 30,
+            },
+            {
+                variant: 8,
+                mathType: "cos",
+                value1: 150,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 8,
+                mathType: "sin",
+                value1: 210,
+                action: "+",
+                value2: 60,
+            },
+            {
+                variant: 8,
+                mathType: "tg",
+                value1: 30,
+                action: "-",
+                value2: 60,
+            },
+            {
+                variant: 9,
+                mathType: "sin",
+                value1: 45,
+                action: "-",
+                value2: 60,
+            },
+            {
+                variant: 9,
+                mathType: "cos",
+                value1: 30,
+                action: "+",
+                value2: 30,
+            },
+            {
+                variant: 9,
+                mathType: "sin",
+                value1: 180,
+                action: "-",
+                value2: 120,
+            },
+            {
+                variant: 9,
+                mathType: "cos",
+                value1: 315,
+                action: "-",
+                value2: 45,
+            },
+            {
+                variant: 9,
+                mathType: "tg",
+                value1: 45,
+                action: "-",
+                value2: 60,
+            },
+            {
+                variant: 10,
+                mathType: "cos",
+                value1: 45,
+                action: "-",
+                value2: 60,
+            },
+            {
+                variant: 10,
+                mathType: "sin",
+                value1: 90,
+                action: "-",
+                value2: 30,
+            },
+            {
+                variant: 10,
+                mathType: "cos",
+                value1: 120,
+                action: "+",
+                value2: 30,
+            },
+            {
+                variant: 10,
+                mathType: "sin",
+                value1: 330,
+                action: "+",
+                value2: 45,
+            },
+            {
+                variant: 10,
+                mathType: "tg",
+                value1: 150,
+                action: "+",
+                value2: 30,
+            },
+
         ]
 
         const templateCard = document.querySelector('#templateCard');
         const templateTask = document.querySelector('#templateTask');
 
         const cards = document.querySelector('.cards');
+
+        const headerButton = document.querySelector('.header__button');
+        const instructionBox = document.querySelector('.header__list');
+        const buttonArrow = document.querySelector('.button__arrow');
 
         for (let i = 1; i <= variantCollection; i++) {
             let newCard = templateCard.content.cloneNode(true); //Создаю клон шаблона карточк
@@ -202,6 +544,11 @@
                 }
             });
         }
+
+        headerButton.addEventListener('click', function () {
+            instructionBox.classList.toggle('visible');
+            buttonArrow.classList.toggle('rotate-right');
+        })
     </script>
 </body>
 
