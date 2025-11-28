@@ -335,11 +335,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    max-width: 230px;
 }
 
 .task3__img--small {
     display: flex;
-    max-height: 25px;
+    max-width: 115px;
 }
 
 .task3__subItems {
