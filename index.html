@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Математика: Контрольная параллель</title>
@@ -14,121 +14,363 @@
 
 <body>
     <header class="header">
-        <h1 class="title">Математика: Контрольная параллель</h1>
-        <div class="header__flexbox">
-            <button class="button header__button" type="button">Инструкция</button>
-            <span class="button__arrow"></span>
-        </div>
-        <ol class="header__list">
-            <li class="header__item">Номер варианта определяется по последней цифре номера в списке группы.</li>
-            <li class="header__item">Студенты в списке группы с 1 по 10 - выполняют билеты 1 - 10</li>
-            <li class="header__item">Студенты в списке с 11 по 20 - для выбора билета используют вторую цифру. <br>
-                Пример: Студент под номер 14 - использует вариант № 4, а студент под номером 17 - вариант № 7</li>
-            <li class="header__item">Для студентов чьи номера в списке наичанаются после 30 - ситуация аналогична. <br>
-                Пример: Студент под номер 31 - использует вариант № 1, а студент под номером 33 - вариант № 3</li>
-            </li>
-        </ol>
+        <h1 class="title container">Математика: Контрольная параллель</h1>
+        <nav class="nav">
+            <ul class="nav__items">
+                <li class="nav__item" data-type="instruction">
+                    Инструкция
+                </li>
+                <li class="nav__item" data-type="task1">
+                    Задание 1
+                </li>
+                <li class="nav__item" data-type="task2">
+                    Задание 2
+                </li>
+                <li class="nav__item" data-type="task3">
+                    Задание 3
+                </li>
+            </ul>
+        </nav>
     </header>
     <main class="main">
-        <section class="section task task1">
-            <h3 class="task__title">Задание 1</h3>
-            <div class="task1__block">
-                <p>sin(x + y) = sin x cos y + cos x sin y</p>
-                <p>sin(x - y) = sin x cos y - cos x sin y</p>
-                <p>sin(x + y) = sin x cos y - cos x sin y</p>
-                <p>sin(x - y) = sin x cos y + cos x sin y</p>
-            </div>
-            <div class="task1__group">
-                <div class="task1__row">
-                    <div class="math-block">
-                        <p>tg(x - y) = </p>
-                        <div class="mathContainer">
-                            <p>tg x + tg y</p>
-                            <p>1 - tg x tg y</p>
+        <section class="section instruction" data-type="instruction">
+            <ol class="header__list container">
+                <li class="header__item">Номер варианта определяется по последней цифре номера в списке группы.</li>
+                <li class="header__item">Студенты в списке группы с 1 по 10 - выполняют билеты 1 - 10</li>
+                <li class="header__item">Студенты в списке с 11 по 20 - для выбора билета используют вторую цифру. <br>
+                    Пример: Студент под номер 14 - использует вариант № 4, а студент под номером 17 - вариант № 7</li>
+                <li class="header__item">Для студентов чьи номера в списке наичанаются после 30 - ситуация аналогична.
+                    <br>
+                    Пример: Студент под номер 31 - использует вариант № 1, а студент под номером 33 - вариант № 3
+                </li>
+                </li>
+            </ol>
+        </section>
+
+        <section class="section task1 visible" data-type="task1">
+
+            <div class="task">
+                <h3 class="subTitle">Задание 1</h3>
+
+                <div class="task1__upBlock">
+                    <p>sin(x + y) = sin x cos y + cos x sin y</p>
+                    <p>sin(x - y) = sin x cos y - cos x sin y</p>
+                    <p>sin(x + y) = sin x cos y - cos x sin y</p>
+                    <p>sin(x - y) = sin x cos y + cos x sin y</p>
+                </div>
+
+                <div class="task1__downBlock">
+
+                    <div class="group">
+
+                        <div class="equation">
+                            <p>tg(x - y) = </p>
+                            <div class="equation__block">
+                                <p>tg x + tg y</p>
+                                <p>1 - tg x tg y</p>
+                            </div>
                         </div>
+
+                        <div class="equation">
+                            <p>tg(x - y) = </p>
+                            <div class="equation__block">
+                                <p>tg x - tg y</p>
+                                <p>1 + tg x tg y</p>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="math-block">
-                        <p>tg(x - y) = </p>
-                        <div class="mathContainer">
-                            <p>tg x - tg y</p>
-                            <p>1 + tg x tg y</p>
+                    <div class="group">
+                        <div class="equation">
+                            <p>ctg(x + y) = </p>
+                            <div class="equation__block">
+                                <p>ctg x ctg y - 1</p>
+                                <p>ctg x + ctg y</p>
+                            </div>
+                        </div>
+                        <div class="equation">
+                            <p>ctg(x - y) = </p>
+                            <div class="equation__block">
+                                <p>ctg x ctg y + 1</p>
+                                <p>ctg x - ctg y</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="task1__row">
-                    <div class="math-block">
-                        <p>ctg(x + y) = </p>
-                        <div class="mathContainer">
-                            <p>ctg x ctg y - 1</p>
-                            <p>ctg x + ctg y</p>
-                        </div>
-                    </div>
-                    <div class="math-block">
-                        <p>ctg(x - y) = </p>
-                        <div class="mathContainer">
-                            <p>ctg x ctg y + 1</p>
-                            <p>ctg x - ctg y</p>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="cards">
+                <!--ЗАДАНИЕ 1. Генерируется из JS-->
             </div>
         </section>
 
-        <section class="section cards">
-            <!--ЗАДАНИЕ 1. Генерируется из JS-->
+        <section class="section task2 visible" data-type="task2">
+            <div class="task">
+                <h3 class="subTitle">Задание 2</h3>
+
+                <div class="task2__group">
+                    <ol class="task2__items">
+                        <li class="task2__item">
+                            (1 - sin(-a)) (1 - sin a)
+                        </li>
+                        <li class="task2__item">
+                            tg(-a) ctga + sin <span class="task2__item--degree">2</span>(-a)
+                        </li>
+                        <li class="task2__item">
+                            cos(-a) + cos a tg <span class="task2__item--degree">2</span>(-a)
+                        </li>
+                        <li class="task2__item">
+                            <div class="task2__item--flex">
+                                <p>1 + sin(-a)</p>
+                                <p>cos(-a) - tg(-a)</p>
+                            </div>
+                        </li>
+                        <li class="task2__item">
+                            <div class="task2__item--flex">
+                                <p>cos <span class="task2__item--degree">2</span>(-a)-cos <span
+                                        class="task2__item--degree">4</span>(-a)</p>
+                                <p>sin <span class="task2__item--degree">2</span>(-a)</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <ol class="task2__items">
+                        <li class="task2__item">
+                            (1 - cos(-a))(1+cos(-a))
+                        </li>
+                        <li class="task2__item">
+                            tg a ctg(-a)+cos <span class="task2__item--degree">2</span>(-a)
+                        </li>
+                        <li class="task2__item">
+                            sin(-a)-sin a ctg <span class="task2__item--degree">2</span>(-a)
+                        </li>
+                        <li class="task2__item">
+                            <div class="task2__item--flex">
+                                <p>1+cos(-a)</p>
+                                <p>sin(-a)-ctg(-a)</p>
+                            </div>
+                        </li>
+                        <li class="task2__item">
+                            <div class="task2__item--flex">
+                                <p>sin <span class="task2__item--degree">2</span>(-a)-sin <span
+                                        class="task2__item--degree">4</span>(-a)</p>
+                                <p>cos <span class="task2__item--degree">2</span> (-a)</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3 class="subTitle">Варианты ответов:</h3>
+
+            <ul class="task2__result-items">
+                <li class="task2__result-item">
+                    <p>sin <span class="task2__item--degree"> 2 </span> a</p>
+                </li>
+                <li class="task2__result-item">
+                    <p>cos <span class="task2__item--degree">2</span> a</p>
+                </li>
+                <li class="task2__result-item">
+                    <p>-sin <span class="task2__item--degree">2</span> a</p>
+                </li>
+                <li class="task2__result-item">
+                    <p>-cos <span class="task2__item--degree">2</span> a</p>
+                </li>
+                <li class="task2__result-item">
+                    <div class="task2__item--flex">
+                        <p>1</p>
+                        <p>sin a</p>
+                    </div>
+                </li>
+                <li class="task2__result-item">
+                    <div class="task2__item--flex">
+                        <p>1</p>
+                        <p>cos a</p>
+                    </div>
+                </li>
+                <li class="task2__result-item">
+                    <div class="task2__item--flex">
+                        <p>1</p>
+                        <p>-sin a</p>
+                    </div>
+                </li>
+                <li class="task2__result-item">
+                    <div class="task2__item--flex">
+                        <p>1</p>
+                        <p>-cos a</p>
+                    </div>
+                </li>
+            </ul>
         </section>
 
-        <section class="section task task2">
-            <h3 class="task__title">Задание 2</h3>
-            <div class="task2__group">
-                <ol class="task2__items">
-                    <li class="task2__item">
-                        (1 - sin(-a)) (1 - sin a)
-                    </li>
-                    <li class="task2__item">
-                        tg(-a) ctga + sin <span class="task2__item--degree">2</span>(-a)
-                    </li>
-                    <li class="task2__item">
-                        cos(-a) + cos a tg <span class="task2__item--degree">2</span>(-a)
-                    </li>
-                    <li class="task2__item">
-                        <div class="task2__item--flex">
-                            <p>1 + sin(-a)</p>
-                            <p>cos(-a) - tg(-a)</p>
-                        </div>
-                    </li>
-                    <li class="task2__item">
-                        <div class="task2__item--flex">
-                            <p>cos <span class="task2__item--degree">2</span>(-a)-cos <span
-                                    class="task2__item--degree">4</span>(-a)</p>
-                            <p>sin <span class="task2__item--degree">2</span>(-a)</p>
-                        </div>
-                    </li>
-                </ol>
-                <ol class="task2__items">
-                    <li class="task2__item">
-                        (1 - cos(-a))(1+cos(-a))
-                    </li>
-                    <li class="task2__item">
-                        tg a ctg(-a)+cos <span class="task2__item--degree">2</span>(-a)
-                    </li>
-                    <li class="task2__item">
-                        sin(-a)-sin a ctg <span class="task2__item--degree">2</span>(-a)
-                    </li>
-                    <li class="task2__item">
-                        <div class="task2__item--flex">
-                            <p>1+cos(-a)</p>
-                            <p>sin(-a)-ctg(-a)</p>
-                        </div>
-                    </li>
-                    <li class="task2__item">
-                        <div class="task2__item--flex">
-                            <p>sin <span class="task2__item--degree">2</span>(-a)-sin <span
-                                    class="task2__item--degree">4</span>(-a)</p>
-                            <p>cos <span class="task2__item--degree">2</span> (-a)</p>
-                        </div>
-                    </li>
-                </ol>
+        <section class="section task3 visible" data-type="task3">
+            <h3 class="subTitle">Задание 3</h3>
+            <div class="task3__wrapper">
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Какая функуция возрастает на промежутке.
+                    </p>
+                    <img class="task3__img" src="./images/task3-1.webp" alt="Задание 3.1">
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">y = sin x</li>
+                        <li class="task3__subItem">y = cos x</li>
+                        <li class="task3__subItem">y = tg x</li>
+                        <li class="task3__subItem">y = ctg x</li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Выберите функцию, которая монотонно убывает на всей области определения.
+                    </p>
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">y = sin x</li>
+                        <li class="task3__subItem">y = cos x</li>
+                        <li class="task3__subItem">y = tg x</li>
+                        <li class="task3__subItem">y = ctg x</li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Область определения какой функции
+                    </p>
+                    <img class="task3__img" src="./images/task3-3.webp" alt="Задание 3.3">
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">y = sin x</li>
+                        <li class="task3__subItem">y = cos x</li>
+                        <li class="task3__subItem">y = tg x</li>
+                        <li class="task3__subItem">y = ctg x</li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Наибольшее значение функции равно 1. Для каких функций это утверждение верно.
+                    </p>
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">y = cos x и y = ctg x</li>
+                        <li class="task3__subItem">y = sin x и y = cos x</li>
+                        <li class="task3__subItem">y = tg x и y = cos x</li>
+                        <li class="task3__subItem">y = tg x и y = ctg x</li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Функция положительна на промежутке.
+                    </p>
+                    <img class="task3__img" src="./images/task3-5.webp" alt="Задание 3.5">
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">y = sin x</li>
+                        <li class="task3__subItem">y = cos x</li>
+                        <li class="task3__subItem">y = tg x</li>
+                        <li class="task3__subItem">y = ctg x</li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Область определения функции - множетво всех действительных чисел, кроме чисел:
+                    </p>
+                    <img class="task3__img" src="./images/task3-6.webp" alt="Задание 3.5">
+                    <p class="task3__item-title">Для какой функции это утверждение верно?</p>
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">y = sin x</li>
+                        <li class="task3__subItem">y = cos x</li>
+                        <li class="task3__subItem">y = tg x</li>
+                        <li class="task3__subItem">y = ctg x</li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Какие утверждения верны для функции y = sin x
+                    </p>
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">
+                            Область значений
+                            <img class="task3__img task3__img--small" src="./images/task3-7.1.webp"
+                                alt="Формула для задания 3.7">
+                        </li>
+                        <li class="task3__subItem">
+                            Функция убывает на промежутке
+                            <img class="task3__img task3__img--small" src="./images/task3-7.2.webp"
+                                alt="Формула для задания 3.7">
+                        </li>
+                        <li class="task3__subItem">Функция чётная</li>
+                        <li class="task3__subItem">
+                            Период функции
+                            <img class="task3__img task3__img--small" src="./images/task3-7.4.webp"
+                                alt="Формула для задания 3.7">
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Какие утверждения верны для функции y = cos x
+                    </p>
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">
+                            Функция убывает на промежутке
+                            <img class="task3__img task3__img--small" src="./images/task3-8.1.webp"
+                                alt="Формула для задания 3.8">
+                        </li>
+                        <li class="task3__subItem">
+                            Период функции
+                            <img class="task3__img task3__img--small" src="./images/task3-8.2.webp"
+                                alt="Формула для задания 3.8">
+                        </li>
+                        <li class="task3__subItem">Функция чётная</li>
+                        <li class="task3__subItem">
+                            Область значений [ -1;1 ]
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Какие утверждения верны для функции y = tg x
+                    </p>
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">
+                            наименьшее значение функции равно -1
+                        </li>
+                        <li class="task3__subItem">
+                            Функция монотонно убывает
+                        </li>
+                        <li class="task3__subItem">
+                            Функция равна 0 при <img class="task3__img task3__img--small" src="./images/task3-9.webp"
+                                alt="Формула для задания 3.9">
+                        </li>
+                        <li class="task3__subItem">
+                            График симметричен относительно начала координат.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="task3__item">
+                    <p class="task3__item-title">
+                        Какие утверждения верны для функции y = сtg x
+                    </p>
+                    <ol class="task3__subItems">
+                        <li class="task3__subItem">
+                            Область определения - множество всех действительных чисел, проме чисел 
+                            <img class="task3__img task3__img--small" src="./images/task3-10.1.webp"
+                                alt="Формула для задания 3.10"> 
+                        </li>
+                        <li class="task3__subItem">
+                            Функция монотонно убывает
+                        </li>
+                        <li class="task3__subItem">
+                            Функция чётная
+                        </li>
+                        <li class="task3__subItem">
+                            Область значений  <img class="task3__img task3__img--small" src="./images/task3-10.2.webp"
+                                alt="Формула для задания 3.10"> 
+                        </li>
+                    </ol>
+                </div>
             </div>
         </section>
 
@@ -155,401 +397,8 @@
         </li>
     </template>
 
-
-    <script>
-        const variantCollection = 10;
-
-        const arrTaskCollection = [
-            {
-                variant: 1,
-                mathType: "sin",
-                value1: 30,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 1,
-                mathType: "cos",
-                value1: 60,
-                action: "-",
-                value2: 45,
-            },
-            {
-                variant: 1,
-                mathType: "sin",
-                value1: 180,
-                action: "-",
-                value2: 60,
-            },
-            {
-                variant: 1,
-                mathType: "cos",
-                value1: 135,
-                action: "+",
-                value2: 30,
-            },
-            {
-                variant: 1,
-                mathType: "tg",
-                value1: 45,
-                action: "+",
-                value2: 30,
-            },
-            {
-                variant: 2,
-                mathType: "cos",
-                value1: 45,
-                action: "+",
-                value2: 30,
-            },
-            {
-                variant: 2,
-                mathType: "sin",
-                value1: 60,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 2,
-                mathType: "cos",
-                value1: 120,
-                action: "-",
-                value2: 45,
-            },
-            {
-                variant: 2,
-                mathType: "sin",
-                value1: 150,
-                action: "+",
-                value2: 30,
-            },
-            {
-                variant: 2,
-                mathType: "tg",
-                value1: 60,
-                action: "-",
-                value2: 45,
-            },
-            {
-                variant: 3,
-                mathType: "sin",
-                value1: 60,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 3,
-                mathType: "cos",
-                value1: 45,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 3,
-                mathType: "sin",
-                value1: 90,
-                action: "-",
-                value2: 15,
-            }, {
-                variant: 3,
-                mathType: "cos",
-                value1: 120,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 3,
-                mathType: "tg",
-                value1: 45,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 4,
-                mathType: "cos",
-                value1: 30,
-                action: "+",
-                value2: 60,
-            },
-            {
-                variant: 4,
-                mathType: "sin",
-                value1: 45,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 4,
-                mathType: "cos",
-                value1: 180,
-                action: "-",
-                value2: 75,
-            },
-            {
-                variant: 4,
-                mathType: "sin",
-                value1: 240,
-                action: "+",
-                value2: 30,
-            },
-            {
-                variant: 4,
-                mathType: "tg",
-                value1: 30,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 5,
-                mathType: "sin",
-                value1: 45,
-                action: "+",
-                value2: 60,
-            },
-            {
-                variant: 5,
-                mathType: "cos",
-                value1: 60,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 5,
-                mathType: "sin",
-                value1: 120,
-                action: "-",
-                value2: 45,
-            },
-            {
-                variant: 5,
-                mathType: "cos",
-                value1: 450,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 5,
-                mathType: "tg",
-                value1: 60,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 6,
-                mathType: "cos",
-                value1: 60,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 6,
-                mathType: "sin",
-                value1: 30,
-                action: "-",
-                value2: 45,
-            },
-            {
-                variant: 6,
-                mathType: "cos",
-                value1: 90,
-                action: "-",
-                value2: 75,
-            },
-            {
-                variant: 6,
-                mathType: "sin",
-                value1: 300,
-                action: "-",
-                value2: 45,
-            },
-            {
-                variant: 6,
-                mathType: "tg",
-                value1: 120,
-                action: "-",
-                value2: 45,
-            },
-            {
-                variant: 7,
-                mathType: "sin",
-                value1: 30,
-                action: "-",
-                value2: 60,
-            },
-            {
-                variant: 7,
-                mathType: "cos",
-                value1: 45,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 7,
-                mathType: "sin",
-                value1: 135,
-                action: "-",
-                value2: 60,
-            },
-            {
-                variant: 7,
-                mathType: "cos",
-                value1: 245,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 7,
-                mathType: "tg",
-                value1: 135,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 8,
-                mathType: "cos",
-                value1: 30,
-                action: "-",
-                value2: 60,
-            },
-            {
-                variant: 8,
-                mathType: "sin",
-                value1: 60,
-                action: "+",
-                value2: 30,
-            },
-            {
-                variant: 8,
-                mathType: "cos",
-                value1: 150,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 8,
-                mathType: "sin",
-                value1: 210,
-                action: "+",
-                value2: 60,
-            },
-            {
-                variant: 8,
-                mathType: "tg",
-                value1: 30,
-                action: "-",
-                value2: 60,
-            },
-            {
-                variant: 9,
-                mathType: "sin",
-                value1: 45,
-                action: "-",
-                value2: 60,
-            },
-            {
-                variant: 9,
-                mathType: "cos",
-                value1: 30,
-                action: "+",
-                value2: 30,
-            },
-            {
-                variant: 9,
-                mathType: "sin",
-                value1: 180,
-                action: "-",
-                value2: 120,
-            },
-            {
-                variant: 9,
-                mathType: "cos",
-                value1: 315,
-                action: "-",
-                value2: 45,
-            },
-            {
-                variant: 9,
-                mathType: "tg",
-                value1: 45,
-                action: "-",
-                value2: 60,
-            },
-            {
-                variant: 10,
-                mathType: "cos",
-                value1: 45,
-                action: "-",
-                value2: 60,
-            },
-            {
-                variant: 10,
-                mathType: "sin",
-                value1: 90,
-                action: "-",
-                value2: 30,
-            },
-            {
-                variant: 10,
-                mathType: "cos",
-                value1: 120,
-                action: "+",
-                value2: 30,
-            },
-            {
-                variant: 10,
-                mathType: "sin",
-                value1: 330,
-                action: "+",
-                value2: 45,
-            },
-            {
-                variant: 10,
-                mathType: "tg",
-                value1: 150,
-                action: "+",
-                value2: 30,
-            },
-
-        ]
-
-        const templateCard = document.querySelector('#templateCard');
-        const templateTask = document.querySelector('#templateTask');
-
-        const cards = document.querySelector('.cards');
-
-        const headerButton = document.querySelector('.header__button');
-        const instructionBox = document.querySelector('.header__list');
-        const buttonArrow = document.querySelector('.button__arrow');
-
-        for (let i = 1; i <= variantCollection; i++) {
-            let newCard = templateCard.content.cloneNode(true); //Создаю клон шаблона карточк
-            const cardCounter = newCard.querySelector('.card__title--counter'); //Заголовок
-            cardCounter.textContent = i;
-            loadTasks(i, arrTaskCollection, newCard);
-            cards.append(newCard);
-        }
-
-        function loadTasks(i, arrTaskCollection, newCard) {
-            const card__items = newCard.querySelector('.card__items'); //В новой карточке нахожу место куда буду пихать строки
-
-
-            arrTaskCollection.forEach((newData) => {
-                if (newData.variant == i) {
-                    const newCardRow = templateTask.content.cloneNode(true); //Создаю клон шаблона строки
-                    newCardRow.querySelector('.card__item--type').textContent = newData.mathType;
-                    newCardRow.querySelector('.card__item__value1').textContent = newData.value1;
-                    newCardRow.querySelector('.card__item-action').textContent = newData.action;
-                    newCardRow.querySelector('.card__item__value2').textContent = newData.value2;
-                    card__items.append(newCardRow);
-                }
-            });
-        }
-
-        headerButton.addEventListener('click', function () {
-            instructionBox.classList.toggle('visible');
-            buttonArrow.classList.toggle('rotate-right');
-        })
-    </script>
+    <script src="./js/db.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

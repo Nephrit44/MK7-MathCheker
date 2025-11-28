@@ -23,53 +23,60 @@ p {
 }
 
 :root {
-    --mainFont: "Libertinus Sans", sans-serif;
-    --bgColor: #f0ead6;
+    --mainFont: "Roboto Condensed", sans-serif;
+    --lightColor: #d2e2f7;
+    --fontColor: #0d2b52;
+    --darkColor: #0F2D69;
+    --backgroundColor: #d2e2f770;
 }
 
 body {
+    margin: 0;
     font-family: var(--mainFont);
-    background-color: var(--bgColor);
-    color: #0d2b52;
+    background-color: var(--backgroundColor);
+    color: var(--fontColor);
+    padding: 5px;
 }
 
-.header {
+.container {
     max-width: 900px;
     margin: 0 auto;
 }
 
-.button {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #0d2b52;
-    font-size: 24px;
-    line-height: normal;
-    font-weight: 400;
-    color: inherit;
-}
-
-.header__button {
-    position: relative;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.button__arrow {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8' standalone='no'?%3e%3c!-- Created with Inkscape (http://www.inkscape.org/) --%3e%3csvg width='11mm' height='11mm' viewBox='0 0 11 11' version='1.1' id='svg1' inkscape:version='1.4 (unknown)' sodipodi:docname='Иконка ARROW.svg' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3e%3csodipodi:namedview id='namedview1' pagecolor='%23ffffff' bordercolor='%23000000' borderopacity='0.25' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' inkscape:document-units='mm' showguides='true' inkscape:zoom='11.313709' inkscape:cx='31.99658' inkscape:cy='34.515648' inkscape:window-width='1920' inkscape:window-height='1008' inkscape:window-x='0' inkscape:window-y='0' inkscape:window-maximized='1' inkscape:current-layer='layer1'%3e%3csodipodi:guide position='41.37829,-11.670035' orientation='1,0' id='guide1' inkscape:locked='false' /%3e%3csodipodi:guide position='22.410776,-29.566591' orientation='0,-1' id='guide2' inkscape:locked='false' /%3e%3c/sodipodi:namedview%3e%3cdefs id='defs1' /%3e%3cg inkscape:label='Слой 1' inkscape:groupmode='layer' id='layer1'%3e%3cpath style='fill:%230d2b52;fill-opacity:1;stroke:none;stroke-width:0.253829;stroke-miterlimit:4.2;stroke-opacity:1' d='M 10.559943,0.51350298 5.5925246,10.513504 0.55994199,0.51352198 Z' id='path2' sodipodi:nodetypes='cccc' /%3e%3c/g%3e%3c/svg%3e ");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 15px;
-    width: 15px;
-    transition: all .3s;
-}
-
-.header__flexbox {
+.nav {
     display: flex;
-    column-gap: 5px;
-    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+}
+
+.nav__items {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__item {
+    padding: 10px;
+    border-left: 1px solid #ffffff6e;
+    transition: background-color .4s;
+    cursor: pointer;
+    text-transform: lowercase;
+
+    &:hover {
+        background-color: #fff;
+        opacity: .5;
+        color: #000;
+    }
+}
+
+.nav__item:last-child {
+    border-right: 1px solid #ffffff6e;
 }
 
 .title {
+    font-family: var(--mainFont);
     font-size: 36px;
     line-height: normal;
     font-weight: 700;
@@ -92,8 +99,23 @@ body {
     margin-bottom: 20px;
 }
 
+.instruction {
+    opacity: 1;
+    height: 100%;
+}
+
+.subTitle {
+    text-align: center;
+    font-size: 23px;
+    color: #5f4b0b;
+    margin: 10px 0;
+}
+
 .task {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 20px;
     max-width: 600px;
     margin: 20px auto;
     border: 3px solid #ad9545;
@@ -102,28 +124,21 @@ body {
     font-size: 20px;
 }
 
-.task__title {
-    text-align: center;
-    font-size: 23px;
-    margin-bottom: 20px;
-    color: #5f4b0b;
-}
-
-.task1__block {
+.task1__upBlock {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     font-weight: 700;
     text-align: center;
-    margin: 20px;
 }
 
-.task1__group {
+.task1__downBlock {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.math-block {
+.equation {
     position: relative;
     display: flex;
     column-gap: 5px;
@@ -132,11 +147,11 @@ body {
     padding: 15px;
 }
 
-.mathContainer {
+.equation__block {
     text-align: center;
 }
 
-.mathContainer>p:first-child {
+.equation__block>p:first-child {
     border-bottom: 1px solid #000;
 }
 
@@ -194,6 +209,8 @@ body {
 .task2__group {
     display: flex;
     justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .task2__items {
@@ -201,6 +218,8 @@ body {
     flex-direction: column;
     row-gap: 10px;
     letter-spacing: 1px;
+    width: 100%;
+    margin-left: 20px;
 }
 
 .task2__item {
@@ -237,6 +256,116 @@ body {
 }
 
 .rotate-right {
-    transform-origin: 50% 50%; 
+    transform-origin: 50% 50%;
     transform: rotate(-90deg)
+}
+
+.task2__result {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.task2__result-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    column-gap: 5px;
+    list-style: none;
+    text-align: center;
+    counter-reset: example 0;
+}
+
+.task2__result-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    padding: 30px 5px 5px 5px;
+    justify-content: center;
+    border: 1px solid #5f4b0b;
+    min-height: 100px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    counter-increment: example 1;
+
+    &::before {
+        position: absolute;
+        content: counter(example);
+        top: 0;
+        width: 100%;
+        left: 50%;
+        font-size: 18px;
+        border: none;
+        transform: translateX(-50%);
+        background: #F0EAD6;
+        background: var(--darkColor);
+        padding-bottom: 5px;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+
+.task3__wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.task3__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 5px;
+    padding: 10px;
+    border: 1px solid #5f4b0b;
+    background-color: #F0EAD6;
+    width: 100%;
+}
+
+.task3__item-title {
+    text-align: center;
+}
+
+.task3__img {
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.task3__img--small {
+    display: flex;
+    max-height: 25px;
+}
+
+.task3__subItems {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.task3__subItem {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 10px;
+    letter-spacing: 1px;
+    border: 1px solid #d2e2f7;
+    background-color: #fff;
+    margin-left: 30px;
+    box-shadow: inset 5px 6px 9px -9px rgba(66, 68, 90, 1);
+}
+
+@media (width > 630px){
+    .task2__group {
+        flex-wrap: nowrap;
+    }
+
+    .task3__item {
+        width: 300px;
+    }
 }
